@@ -2,10 +2,10 @@ name: Publish Release
 
 on:
   push:
-    # branches:
-    #   - main
-    # paths-ignore:
-    #   - '.github/workflows/release.yml'
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/release.yml'
   workflow_dispatch:
 
 permissions:
@@ -17,4 +17,4 @@ jobs:
     name: Create Release
     uses: jlroskens/ci-workflows/.github/workflows/release.yml@v0
     with:
-      release-branch: feature/initial-version
+      release-branch: main
